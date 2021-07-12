@@ -1,0 +1,10 @@
+{
+    "editor.fontSize": 17,
+    "debug.console.fontSize": 17,
+    "terminal.integrated.fontSize": 17,
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true
+    },
+    "explorer.compactFolders": false
+}
