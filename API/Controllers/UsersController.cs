@@ -5,6 +5,7 @@ using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
@@ -16,6 +17,7 @@ namespace API.Controllers
             _context = context;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers() 
         {
@@ -25,6 +27,7 @@ namespace API.Controllers
         }
 
         // api/users/3
+        [Authorize]
          [HttpGet("{id}")]
         public async Task<ActionResult<AppUser>> GetUsers(int id) 
         {
